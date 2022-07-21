@@ -1,0 +1,21 @@
+html    
+    head 
+        title="Productos"
+    body 
+        if productos.length == 0
+            p="Todavía no hay productos cargados."
+        else
+            table 
+                thead 
+                    tr 
+                        th="Título"
+                        th="Precio"
+                        th="Imagen"
+                tbody  
+                    each prod in productos
+                        tr 
+                            td=prod.title
+                            td=prod.price
+                            td
+                                img(src=prod.thumbnail, alt=prod.title width="100px")
+        a(href="/")="Ingresar un nuevo producto" 

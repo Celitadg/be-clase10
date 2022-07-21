@@ -1,0 +1,17 @@
+html    
+    head 
+        title="Formularios"
+    body 
+        form(action="/api/productos" method="post")
+            label(for="title")="Título:" 
+            input(name="title")
+            br
+            label(for="price")="Precio:" 
+            input(name="price" type="number")
+            br
+            label(for="thumbnail")="Imagen:" 
+            input(name="thumbnail")
+            br
+            button(type="submit")="Agregar"
+
+        a(href="/productos")="Mostrar lista de productos"    
